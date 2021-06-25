@@ -1,11 +1,11 @@
-const path = require("path/posix");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-
   entry: {
     app: ["babel-polyfill", "./src/index.tsx"]
   },
-
   module: {
     rules: [
       { 

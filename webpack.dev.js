@@ -1,4 +1,10 @@
-module.exports = {
+const path = require("path");
+const webpack = require("webpack");
+const Dotenv = require("dotenv-webpack");
+const merge = require("webpack-merge");
+const common = require("./webpack.common.js");
+
+module.exports = merge(common, {
   mode: "development",
   devtool: "cheap-module-source-map",
   devServer: {
@@ -15,4 +21,4 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],
-}
+});
