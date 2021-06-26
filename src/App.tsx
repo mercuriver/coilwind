@@ -5,7 +5,9 @@ const App = () => {
     <>
       <div>Wello, Horld!</div>
       <h1>{JSON.stringify(process)}</h1>
-      <h1>{JSON.stringify(process.env)}</h1>
+      <h2>{process.env.DB_PASS}</h2>
+      <h2>{process.env.DB_HOST}</h2>
+      <h2>{process.env.S3_API}</h2>
     </>
   );
 };
